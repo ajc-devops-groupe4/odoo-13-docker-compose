@@ -11,6 +11,20 @@ services:
     volumes:
         - ./postgresql:/var/lib/postgresql/data
 
+##########################
+  ic_webapp:
+    # Use image ic_webapp:1.0
+    image: ic-webapp:1.0
+    #command:
+    #volumes:
+    #restart:
+    environment:
+      - ODOO_URL= 
+      - PGADMIN_URL= 
+    expose:
+      - 8080
+ ##########################
+ 
   odoo13:
     image: odoo:13
     user: root
